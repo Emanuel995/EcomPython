@@ -1,7 +1,7 @@
 import os
 os.system("clear")
 print("Estas usando un sistema: "+os.name)
-file = open("examenes","r")
+file = open("examenes.txt","r")
 cant = 0
 suma = 0
 nota_min = 9999
