@@ -50,4 +50,4 @@ for l in lista_min:
 print("")
 print("============")
 print("")
-print("primedio: "+str(suma/cant))
+print("primedio: "+str(round(suma/cant,2))) 
