@@ -1,0 +1,5 @@
+A partir del archivo provisionado (12-10 Archivo Fuente), procesar los registros que se obtienen, respondiendo por salida lo siguiente:
+1) Cantidad de Registros
+2) Promedio de las Notas
+3) Alumno con Peor Nota (menor valor). Si son varios, listar todos
+4) Alumno con Mejor Nota (mayor valor). Si son varios, listar todos
