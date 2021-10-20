@@ -1,5 +1,9 @@
 import os
-os.system("clear")
+if os.system == "nt":
+    os.system("cls")
+if os.system == "posix":
+    os.system("clear")
+    
 print("Estas usando un sistema: "+os.name)
 file = open("examenes.txt","r")
 cant = 0
@@ -50,4 +54,5 @@ for l in lista_min:
 print("")
 print("============")
 print("")
-print("primedio: "+str(round(suma/cant,2))) 
+cant -= 1
+print("promedio: "+str(round(suma/cant,2))) 
