@@ -1,9 +1,12 @@
 import os
 
-from src.validar_linea import validar_cueanexo, validar_sector, validar_ambito
+from src.validar_linea import validar_cueanexo, validar_sector, validar_ambito, validar_codarea, validar_codpostal, validar_nrotel, validar_true_false
 
 #Limpiar pantalla
-os.system("clear")
+#if os.name =='nt':
+#    os.system("cls")
+#else:
+#    os.system("clear")
 
 #Abrir Archivo de entrada
 archivo = open('prueba.txt','r')
@@ -28,6 +31,27 @@ for line in archivo:
                 validar_sector(linea[i])
             if i == 4:
                 validar_ambito(linea[i])
+            #5 Domicilio
+            #6 CP
+            if i == 6:
+                validar_codpostal(linea[i])
+            #7 Cod Area
+            if i == 7:
+                validar_codarea(linea[i])
+            #8 Telefono
+            if i == 8:
+                validar_nrotel(linea[i])
+            #9 Cod Loc
+            #10 Localidad
+            #11 Departamento
+            #12 Mail 
+            if i > 11:
+                if "@" in str(linea[i]):
+                    mail = str(linea[i])
+                else:
+                    #Validar True/False
+                    validar_true_false(linea[i])
+
             #Armo el renglon para mostrar
             renglon += linea[i]+'\t'
             

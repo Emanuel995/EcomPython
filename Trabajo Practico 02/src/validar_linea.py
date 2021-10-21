@@ -39,6 +39,7 @@ def validar_codpostal(codpostal):
     try:
         int(codpostal)
         is_error = False
+        print("TIPO DE DATO CORRECTO COD POSTAL")
     except:
         print("ERROR TIPO DE DATO COD POSTAL")
         is_error = True 
@@ -46,7 +47,28 @@ def validar_codpostal(codpostal):
     return is_error
 
 def validar_codarea(codarea):
-    pass
+    try:
+        int(codarea)
+        is_error = False
+        print("TIPO DE DATO CORRECTO COD AREA")
+    except:
+        print("ERROR TIPO DE DATO COD AREA")
+        is_error = True 
+    return is_error
 
 def validar_nrotel(nrotel):
-    pass
+    nrotel_valido = ''
+    for nro in nrotel:
+        if nro in [1,2,3,4,5,6,7,8,9,0]:
+            nrotel_valido+= nro
+    return nrotel_valido
+
+
+def validar_true_false(booleano):
+    if booleano.upper() == 'VERDADERO' or booleano.upper() == 'FALSO':
+        is_error = False
+        print("TIPO DE DATO CORRECTO")
+    else:
+        is_error = True
+        print("ERROR TIPO DE DATO")
+    return is_error
