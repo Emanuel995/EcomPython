@@ -1,4 +1,5 @@
 
+#Validacion cueanexo   
 def validar_cueanexo(cueanexo):
     if len(cueanexo) == 9:
         try:
@@ -13,6 +14,7 @@ def validar_cueanexo(cueanexo):
     
     return is_error
          
+#Validar sector
 def validar_sector(sector):
     VALIDO = ("ESTATAL", "PRIVADO", "SOCIAL/COOPERATIVA")
     if sector.upper() in VALIDO:
@@ -24,6 +26,7 @@ def validar_sector(sector):
     
     return is_error
 
+#Validar ambito
 def validar_ambito(ambito):
     VALIDO = ("RURAL", "URBANO")
     if ambito.upper() in VALIDO:
@@ -35,6 +38,7 @@ def validar_ambito(ambito):
 
     return is_error
 
+#Validar codpostal
 def validar_codpostal(codpostal):
     try:
         int(codpostal)
@@ -46,6 +50,7 @@ def validar_codpostal(codpostal):
     
     return is_error
 
+#Validar codarea
 def validar_codarea(codarea):
     try:
         int(codarea)
@@ -56,6 +61,7 @@ def validar_codarea(codarea):
         is_error = True 
     return is_error
 
+#Validar nrotel
 def validar_nrotel(nrotel):
     nrotel_valido = ''
     for nro in nrotel:
@@ -63,12 +69,12 @@ def validar_nrotel(nrotel):
             nrotel_valido+= nro
     return nrotel_valido
 
-
+#Validar verdadero falso
 def validar_true_false(booleano):
-    if booleano.upper() == 'VERDADERO' or booleano.upper() == 'FALSO':
+    if booleano.upper().strip() == 'VERDADERO' or booleano.upper().strip() == 'FALSO':
         is_error = False
-        print("TIPO DE DATO CORRECTO")
+        print("TIPO DE DATO CORRECTO (TRUE/FALSE)")
     else:
         is_error = True
-        print("ERROR TIPO DE DATO")
+        print("ERROR TIPO DE DATO (TRUE/FALSE) ")
     return is_error
