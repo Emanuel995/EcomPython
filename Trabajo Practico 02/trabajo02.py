@@ -139,6 +139,7 @@ for line in archivo:
             escribir_archivo(ARCH_LOG,texto)
             cant_validos += 1
         else:
+            fecha = datetime.datetime.now()
             texto = fecha.strftime("%Y-%m-%d %H:%M ") + error
             escribir_archivo(ARCH_LOG,texto)
             cant_invalidos += 1
